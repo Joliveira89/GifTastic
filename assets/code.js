@@ -11,8 +11,6 @@ $(document).ready(function(){
             .done(function(response) {
 
 
-                console.log(response)
-
                 var results = response.data;
 
                 for (var i = 0; i < results.length; i++) {
@@ -45,7 +43,6 @@ $(document).ready(function(){
                 $('.anImg').on('click', function() {
             
                     var state = $(this).attr('data-state'); 
-                    console.log(this);
 
                     if (state == 'still') {
                     
@@ -76,10 +73,10 @@ $(document).ready(function(){
             var newButton = $("<button/>").addClass( "btn btn-info animal").attr('data-name',animalButton).html(animalButton).css({'margin': '5px'});
             
             $("#animalsbuttons").append(newButton);
-                console.log("Work");
+                
 
             queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animalButton + "&api_key=dc6zaTOxFJmzC&limit=10";
-                console.log(animalButton);
+                
 
             $.ajax({
             url: queryURL,
@@ -120,7 +117,7 @@ $(document).ready(function(){
                 $('.anImg').on('click', function() {
             
                     var state = $(this).attr('data-state'); 
-                    console.log(this);
+                   
 
                     if (state == 'still') {
                     
